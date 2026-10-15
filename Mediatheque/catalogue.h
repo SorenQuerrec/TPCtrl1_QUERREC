@@ -12,20 +12,25 @@
 #define CATALOGUE_H
 #include <iostream>
 #include <iomanip>
-
 #include "media.h"
 
 class Catalogue
 {
 private:
-    Media lesMedias;
-    int nbMedia;
+    Media **lesMedias;
+    const int nbMedias;
     int index;
+    enum TYPE_MEDIA
+    {
+        TOUS = 1,
+        VIDEO,
+        LIVRE
+    };
 
 public:
-    Catalogue(const Media &_lesMedias, int _nbMedia, int _index);
+    Catalogue(int _nbMedias);
     ~Catalogue();
-    void AjouterMedia(const Media * _ptrMedia);
+    bool AjouterMedia(Media * ptrMedia);
     void Consulter(const int _typeAffichage);
 
 

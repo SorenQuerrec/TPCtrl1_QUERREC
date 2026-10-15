@@ -10,24 +10,43 @@
 
 #include "catalogue.h"
 
-Catalogue::Catalogue(const Media &_lesMedias, int _nbMedia, int _index) : lesMedias(_lesMedias),
-    nbMedia(_nbMedia),
-    index(_index)
+Catalogue::Catalogue(int _nbMedias)
+    : nbMedias(_nbMedias)
 {
-
+    lesMedias = new Media *[nbMedias];
+    index = 0;
 }
 
 Catalogue::~Catalogue()
 {
-
+    delete [] lesMedias;
 }
 
-void Catalogue::AjouterMedia(const Media *_ptrMedia)
+bool Catalogue::AjouterMedia(Media *ptrMedia)
 {
-
+    bool retour = true;
+    if (index < nbMedias)
+        lesMedias[index++] = ptrMedia ;
+    else
+        retour = false;
+    return retour;
 }
 
 void Catalogue::Consulter(const int _typeAffichage)
 {
+    // for(int indice = 0; indice < index; ++indice)
+    // {
+    //     if(dynamic_cast<const class DVD*>(lesMedias[indice]))
+    //         lesMedias[indice]->Afficher();
+    // }
 
+    for(int indice = 0; indice < index; ++indice)
+    {
+        // if(_typeAffichage == 1) // utilisation d'un switch case envisagée
+        //     lesMedias[indice]->Afficher();
+        // if(dynamic_cast<const class DVD*>(lesMedias[indice]) && _typeAffichage == 2)
+        //     lesMedias[indice]->Afficher();
+        // if(dynamic_cast<const class Livre*>(lesMedias[indice]) && _typeAffichage == 3)
+        //     lesMedias[indice]->Afficher();
+    }
 }

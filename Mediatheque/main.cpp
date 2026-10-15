@@ -11,15 +11,30 @@
 #include "media.h"
 #include "livre.h"
 #include "dvd.h"
+#include "catalogue.h"
+#include "menu.h"
 
 using namespace std;
 
-int main() // QUESTION 7 et 9
-{
+// int main() // QUESTION 7 et 9
+// {
 
-    Livre livre1(1000,"Prince","soren",1967,6767);
-    livre1.Afficher();
-    DVD dvd1(1000,"Prince","soren",1967,6767);
-    dvd1.Afficher();
+//     Livre livre1(1000,"Prince","soren",1967,6767);
+//     livre1.Afficher();
+//     DVD dvd1(1000,"Prince","soren",1967,6767);
+//     dvd1.Afficher();
+//     return 0;
+// }
+
+int main()
+{
+    Catalogue leCatalogue(10);
+    int choix;
+    Menu leMenu("menu.txt");
+    do
+    {
+        choix = leMenu.Afficher();
+    }while(choix != 0);
+
     return 0;
 }
