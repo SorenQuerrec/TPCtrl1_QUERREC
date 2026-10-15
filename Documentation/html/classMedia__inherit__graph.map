@@ -1,0 +1,7 @@
+<map id="Media" name="Media">
+<area shape="rect" id="Node000001" title=" " alt="" coords="38,5,101,31"/>
+<area shape="rect" id="Node000002" href="$classDVD.html" title=" " alt="" coords="5,79,56,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="59,44,39,80,35,77,54,42"/>
+<area shape="rect" id="Node000003" href="$classLivre.html" title=" " alt="" coords="81,79,135,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="85,42,104,77,99,80,80,44"/>
+</map>
